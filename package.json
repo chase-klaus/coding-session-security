@@ -1,0 +1,36 @@
+{
+  "name": "coding-session-security",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec \"node -r dotenv/config\" index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snigo/coding-session-security.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snigo/coding-session-security/issues"
+  },
+  "homepage": "https://github.com/snigo/coding-session-security#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^4.4.1",
+    "validator": "^13.5.2",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/validator": "^13.1.3",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.21.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.7"
+  }
+}
