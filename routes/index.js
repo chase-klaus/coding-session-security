@@ -1,5 +1,7 @@
 const { Router } = require('express');
 const validator = require('validator');
+const { createUserCtrl, loginUserCtrl, authUserCtrl } = require('./controllers');
+const authMW = require('./mw');
 
 const router = Router();
 
@@ -17,5 +19,12 @@ router.post('/', (req, res) => {
   const serializedName = validator.escape(trimmedName.replace(/'/g, '’'));
   res.status(200).json({ message: `User with name ${serializedName} is saved to DB.` });
 });
+
+/**
+ * Auth below
+ */
+router.post('/user', createUserCtrl);
+router.get('/user', authMW, authUserCtrl);
+router.post('/login', loginUserCtrl);
 
 module.exports = router;
